@@ -103,7 +103,7 @@ Namespace MainDemo.Module
             rule.Properties.Id = Me.Id
             rule.Properties.InvertResult = Me.InvertResult
             rule.Properties.CustomMessageTemplate = Me.CustomMessageTemplate
-            rule.Properties.TargetContextIDs = Me.ContextIDs
+            rule.Properties.TargetContextIDs = New ContextIdentifiers(Me.ContextIDs).ToString()
             rule.Properties.TargetType = Me.ObjectTypeCore
             If rule.Properties.TargetType IsNot Nothing Then
                 For Each pi As PropertyInfo In rule.Properties.TargetType.GetProperties()
