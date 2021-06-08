@@ -65,7 +65,7 @@ namespace MainDemo.Module {
             rule.Properties.Id = this.Id;
             rule.Properties.InvertResult = this.InvertResult;
             rule.Properties.CustomMessageTemplate = this.CustomMessageTemplate;
-            rule.Properties.TargetContextIDs = new ContextIdentifiers(this.ContextIDs).ToString();
+            rule.Properties.TargetContextIDs = this.ContextIDs;
             rule.Properties.TargetType = this.ObjectTypeCore;
             if(rule.Properties.TargetType != null) {
                 foreach(PropertyInfo pi in rule.Properties.TargetType.GetProperties()) {
